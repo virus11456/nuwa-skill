@@ -11,12 +11,15 @@
 > *「你想蒸馏的下一个员工，何必是同事」*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
-[![Skills](https://img.shields.io/badge/skills.sh-Compatible-green)](https://skills.sh)
+[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-green)](https://agentskills.io)
+[![skills.sh](https://img.shields.io/badge/skills.sh-Compatible-blue)](https://skills.sh)
+[![Multi-Runtime](https://img.shields.io/badge/Runtime-Claude%20Code%20·%20Codex%20·%20Cursor%20·%20OpenClaw%20·%20Hermes-blueviolet)](#安装)
 
 <br>
 
 **女娲帮你蒸馏任何人的思维方式，让乔布斯、马斯克、芒格、费曼都给你打工。**
+
+<sub>基于开放的 [Agent Skills 协议](https://agentskills.io)，可在 Claude Code、Codex、Cursor、OpenClaw、Hermes Agent、CodeBuddy、Workbuddy、Gemini CLI、OpenCode 等 50+ 兼容 runtime 中运行。</sub>
 
 <br>
 
@@ -119,11 +122,53 @@ Naval     ❯ 你列了三个欲望。每个欲望都是你跟不快乐签的一
 
 ## 安装
 
+女娲基于开放的 [Agent Skills](https://agentskills.io) 协议，可在任何 skills-compatible 的 AI agent runtime 中运行。
+
+### 方式一：一行命令（推荐，跨 runtime）
+
+打开你正在用的 agent（Claude Code、Codex、Cursor、OpenClaw、Hermes、CodeBuddy、Workbuddy、Gemini CLI、OpenCode 等），告诉它：
+
+```
+帮我安装这个 skill：https://github.com/alchaincyf/nuwa-skill
+```
+
+或者用通用 CLI 安装器（[vercel-labs/skills](https://github.com/vercel-labs/skills)，支持 55+ runtime）：
+
 ```bash
 npx skills add alchaincyf/nuwa-skill
 ```
 
-然后在 Claude Code 里：
+它会自动识别你当前的 runtime 并把 skill 放到正确目录。需要指定时加 `-a claude-code` / `-a codex` / `-a cursor` / `-a openclaw` 等参数。
+
+### 方式二：手动安装
+
+<details>
+<summary>展开查看各 runtime 的 skills 目录</summary>
+
+| Runtime | 安装路径 |
+|---|---|
+| Claude Code | `~/.claude/skills/nuwa-skill/` |
+| Codex CLI | `~/.codex/skills/nuwa-skill/` |
+| Cursor | `~/.cursor/skills/nuwa-skill/` |
+| OpenClaw | `~/.openclaw/workspace/skills/nuwa-skill/` |
+| Hermes Agent | 跑 `tools/install_hermes_skill.py` |
+| 其他 runtime | clone 到对应 runtime 的 `skills/` 目录 |
+
+```bash
+git clone https://github.com/alchaincyf/nuwa-skill <上面对应的路径>
+```
+
+</details>
+
+### 方式三：作为参考资料使用
+
+即使 runtime 不支持 Agent Skills 自动加载，你也可以直接把 `SKILL.md` 的内容粘贴进对话——它本质就是一份 markdown + YAML frontmatter。
+
+---
+
+### 使用
+
+装好后，告诉 agent：
 
 ```
 > 蒸馏一个保罗·格雷厄姆
@@ -169,11 +214,11 @@ npx skills add alchaincyf/nuwa-skill
 
 ## 已蒸馏人物
 
-女娲已蒸馏了13位人物 + 1个主题。每个都是独立的、可直接安装使用的Skill：
+女娲已蒸馏了13位人物 + 1个主题。每个都是独立的、可直接安装使用的Skill，全部基于 Agent Skills 协议，可在 Claude Code / Codex / Cursor / OpenClaw / Hermes 等 runtime 通用：
 
 ### 人物Skill
 
-| 人物 | 领域 | 独立仓库 | 一键安装 |
+| 人物 | 领域 | 独立仓库 | 一键安装（跨 runtime） |
 |------|------|---------|---------|
 | 🔥 **Paul Graham** | 创业/写作/产品/人生哲学 | [paul-graham-skill](https://github.com/alchaincyf/paul-graham-skill) | `npx skills add alchaincyf/paul-graham-skill` |
 | 🔥 **张一鸣** | 产品/组织/全球化/人才 | [zhang-yiming-skill](https://github.com/alchaincyf/zhang-yiming-skill) | `npx skills add alchaincyf/zhang-yiming-skill` |
@@ -191,7 +236,7 @@ npx skills add alchaincyf/nuwa-skill
 
 ### 主题Skill
 
-| 主题 | 领域 | 独立仓库 | 一键安装 |
+| 主题 | 领域 | 独立仓库 | 一键安装（跨 runtime） |
 |------|------|---------|---------|
 | **X导师** | X/Twitter运营全栈 | [x-mentor-skill](https://github.com/alchaincyf/x-mentor-skill) | `npx skills add alchaincyf/x-mentor-skill` |
 
@@ -321,11 +366,11 @@ MIT License © [花叔 Huashu](https://github.com/alchaincyf)
 
 **[colleague-skill](https://github.com/titanwings/colleague-skill)** proved that distilling a person into an AI skill is viable. **Nuwa** asks: why stop at colleagues? Distill the best minds in every field — Munger, Feynman, Musk, Naval — people who conveniently left mountains of distillable material behind.
 
-Nuwa is a Claude Code skill that extracts cognitive frameworks — mental models, decision heuristics, expression DNA — from any public figure into a runnable perspective skill.
+Nuwa is an [Agent Skill](https://agentskills.io) that extracts cognitive frameworks — mental models, decision heuristics, expression DNA — from any public figure into a runnable perspective skill. Works in Claude Code, Codex, Cursor, OpenClaw, Hermes Agent, CodeBuddy, Workbuddy, Gemini CLI, OpenCode, and 50+ skills-compatible runtimes.
 
 Not role-playing. Cognitive architecture extraction.
 
-**Install**: `npx skills add alchaincyf/nuwa-skill`
+**Install** (cross-runtime, auto-detects your agent): `npx skills add alchaincyf/nuwa-skill`
 
 **How it works**: Input a name → 6 parallel research agents → 40+ primary sources → triple-verified mental models → quality-validated SKILL.md
 
