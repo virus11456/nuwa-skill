@@ -63,12 +63,16 @@
 
 每個人物 Skill 都基於約 50 個一手/二手來源深度調研，提煉 6–7 個核心心智模型、10 條決策啟發式、完整表達 DNA 與誠實邊界，調研過程保存在各自的 `references/research/` 內，完全自包含。
 
-**安裝（任何裝置的 Claude Code）：**
+**安裝（任何裝置的 Claude Code）— 一鍵裝好整包（含達爾文自動進化器）：**
 
 ```bash
 git clone https://github.com/virus11456/nuwa-skill.git
-cp -R nuwa-skill/skills/* ~/.claude/skills/
+cd nuwa-skill && bash install.sh
 ```
+
+`install.sh` 會把 `skills/` 底下**全部** skill（6 個人物視角 + 圓桌 + 達爾文）一次裝進 `~/.claude/skills/`，**達爾文預設一起裝、隨叫隨到**。
+
+> 不想用腳本也可以手動： `cp -R nuwa-skill/skills/* ~/.claude/skills/`
 
 之後開任何新對話會自動載入。**單一視角**直接叫名字；**多人圓桌**這樣用：
 
