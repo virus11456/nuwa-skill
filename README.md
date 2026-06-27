@@ -43,6 +43,43 @@
 
 ---
 
+## 🎩 思維顧問團（本 Fork 新增）
+
+<p align="center">
+  <img src="skills/advisory-board-cover.svg" alt="思維顧問團 · Distilled Minds" width="820"/>
+</p>
+
+本 Fork 用女娲蒸餾了一組可直接使用的**人物視角 Skill**，並做了一個讓他們**一起討論**的圓桌模式。全部放在 [`skills/`](skills/) 目錄，開箱即用。
+
+| Skill | 角色 | 核心視角 |
+|---|---|---|
+| `munger-perspective` | 查理·芒格 | 理性 · 逆向思維 · 避免愚蠢 · 能力圈 |
+| `elon-musk-perspective` | 伊隆·馬斯克 | 第一性原理 · 快速試錯 · 極致風險容忍 |
+| `thiel-perspective` | 彼得·蒂爾 | 逆向真理 · 壟斷 vs 競爭 · 明確的樂觀 |
+| `steve-jobs-perspective` | 史蒂夫·賈伯斯 | 科技×人文 · 極致專注 · 簡約與品味 |
+| `advisory-dialogue` | 圓桌主持 | 讓多個人物**真實交鋒**、收斂出決策地圖 |
+
+每個人物 Skill 都基於約 50 個一手/二手來源深度調研，提煉 6–7 個核心心智模型、10 條決策啟發式、完整表達 DNA 與誠實邊界，調研過程保存在各自的 `references/research/` 內，完全自包含。
+
+**安裝（任何裝置的 Claude Code）：**
+
+```bash
+git clone https://github.com/virus11456/nuwa-skill.git
+cp -R nuwa-skill/skills/* ~/.claude/skills/
+```
+
+之後開任何新對話會自動載入。**單一視角**直接叫名字；**多人圓桌**這樣用：
+
+```
+用多Agent圓桌讓芒格、馬斯克、蒂爾、賈伯斯討論：[你的決策]
+```
+
+帶「多Agent」→ 每人是獨立 agent、各自推理互相反駁（最真實）；不帶則由單一模型分飾多角（較快）。詳見 [`skills/README.md`](skills/README.md)。
+
+> ⚠️ 僅適用於 **Claude Code**（CLI / 桌面版 / IDE）；claude.ai 一般聊天與手機 App 讀不到本機 `~/.claude/skills/`。
+
+---
+
 ## 效果示例
 
 ```
