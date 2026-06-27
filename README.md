@@ -57,7 +57,9 @@
 | `elon-musk-perspective` | 伊隆·馬斯克 | 第一性原理 · 快速試錯 · 極致風險容忍 |
 | `thiel-perspective` | 彼得·蒂爾 | 逆向真理 · 壟斷 vs 競爭 · 明確的樂觀 |
 | `steve-jobs-perspective` | 史蒂夫·賈伯斯 | 科技×人文 · 極致專注 · 簡約與品味 |
+| `mark-teacher-perspective` | 馬克老師 | 人本×實戰 · 反求諸己 · 謙卑感恩 · 僕人領導 |
 | `advisory-dialogue` | 圓桌主持 | 讓多個人物**真實交鋒**、收斂出決策地圖 |
+| `darwin-skill` | 達爾文（工具）| 讓任何 SKILL.md 用 9 維評分持續自我進化 |
 
 每個人物 Skill 都基於約 50 個一手/二手來源深度調研，提煉 6–7 個核心心智模型、10 條決策啟發式、完整表達 DNA 與誠實邊界，調研過程保存在各自的 `references/research/` 內，完全自包含。
 
