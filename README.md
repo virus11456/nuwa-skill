@@ -94,7 +94,12 @@ skill 打分 / 優化skill / skill review
 
 它會：評分 → spawn 獨立 agent 盲評（避免自評自誇）→ 爬山改進 → 只保留更好的版本（棘輪）→ 生成成果卡片。每步有人類確認點，不會自己亂改。
 
-> 想讓達爾文「自動提醒」或「定期跑」？可以用 Claude Code 的 **hook**（改了某個 skill 時提醒你）或 **scheduled task**（定期評估回報）達成——預設不開，需另外設定。
+> **想讓達爾文「主動提醒」你？** 跑一次：
+> ```bash
+> bash setup-darwin-reminder.sh
+> ```
+> 它會加一個 hook：之後**每當你新增/修改任何 `SKILL.md`，就會跳一行提醒你可以叫達爾文優化**。冪等（已裝就跳過）、merge 不覆蓋既有設定、自動備份。裝完在 Claude Code 開一次 `/hooks` 或重啟即生效。
+> 這是本機個人設定（寫在 `~/.claude/settings.json`，含個人金鑰，**不進 repo**），所以**每台裝置各跑一次**這支腳本即可。
 
 > ⚠️ 僅適用於 **Claude Code**（CLI / 桌面版 / IDE）；claude.ai 一般聊天與手機 App 讀不到本機 `~/.claude/skills/`。
 
