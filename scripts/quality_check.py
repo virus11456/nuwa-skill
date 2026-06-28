@@ -50,12 +50,12 @@ def check_limitations(content: str) -> tuple[bool, str]:
 
 def check_expression_dna(content: str) -> tuple[bool, str]:
     """检查表达DNA辨识度"""
-    dna_section = bool(re.search(r'表达DNA|Expression DNA|表达风格', content, re.IGNORECASE))
+    dna_section = bool(re.search(r'表达DNA|表達DNA|Expression DNA|表达风格|表達風格', content, re.IGNORECASE))
     if not dna_section:
         return False, "❌ 未找到表达DNA section"
 
     # 检查是否有具体的风格描述（句式、词汇等）
-    style_markers = len(re.findall(r'句式|词汇|语气|幽默|节奏|确定性|引用|口头禅', content))
+    style_markers = len(re.findall(r'句式|词汇|詞彙|语气|語氣|幽默|节奏|節奏|确定性|確定性|引用|口头禅|口頭禪', content))
     passed = style_markers >= 3
     return passed, f"表达DNA特征: {style_markers}项 {'✅' if passed else '❌ (应≥3项)'}"
 
@@ -63,7 +63,7 @@ def check_expression_dna(content: str) -> tuple[bool, str]:
 def check_honest_boundary(content: str) -> tuple[bool, str]:
     """检查诚实边界（至少3条）"""
     # 找诚实边界section
-    boundary_match = re.search(r'(?:##\s+.*诚实边界|## Honest Boundary)(.*?)(?=\n##\s|\Z)', content, re.DOTALL | re.IGNORECASE)
+    boundary_match = re.search(r'(?:##\s+.*诚实边界|##\s+.*誠實邊界|## Honest Boundary)(.*?)(?=\n##\s|\Z)', content, re.DOTALL | re.IGNORECASE)
     if not boundary_match:
         return False, "❌ 未找到诚实边界section"
 
@@ -77,7 +77,7 @@ def check_honest_boundary(content: str) -> tuple[bool, str]:
 
 def check_tensions(content: str) -> tuple[bool, str]:
     """检查内在张力（至少2对）"""
-    tension_markers = len(re.findall(r'张力|矛盾|tension|paradox|一方面.*另一方面|既.*又', content, re.IGNORECASE))
+    tension_markers = len(re.findall(r'张力|張力|矛盾|tension|paradox|一方面.*另一方面|既.*又', content, re.IGNORECASE))
     passed = tension_markers >= 2
     return passed, f"内在张力: {tension_markers}处 {'✅' if passed else '❌ (应≥2处)'}"
 
