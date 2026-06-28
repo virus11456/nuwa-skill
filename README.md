@@ -82,6 +82,20 @@ cd nuwa-skill && bash install.sh
 
 帶「多Agent」→ 每人是獨立 agent、各自推理互相反駁（最真實）；不帶則由單一模型分飾多角（較快）。詳見 [`skills/README.md`](skills/README.md)。
 
+### 🧬 達爾文怎麼用（會自動嗎？）
+
+**重要：達爾文和所有 Claude Code skill 一樣是「按需呼叫」的——它不會自己跳出來提醒你，也不會在背景自動跑。** 想用時直接開口說，它就會啟動：
+
+```
+達爾文，幫我優化 mark-teacher-perspective
+達爾文，評估所有 skill          ← 只評分不改
+skill 打分 / 優化skill / skill review
+```
+
+它會：評分 → spawn 獨立 agent 盲評（避免自評自誇）→ 爬山改進 → 只保留更好的版本（棘輪）→ 生成成果卡片。每步有人類確認點，不會自己亂改。
+
+> 想讓達爾文「自動提醒」或「定期跑」？可以用 Claude Code 的 **hook**（改了某個 skill 時提醒你）或 **scheduled task**（定期評估回報）達成——預設不開，需另外設定。
+
 > ⚠️ 僅適用於 **Claude Code**（CLI / 桌面版 / IDE）；claude.ai 一般聊天與手機 App 讀不到本機 `~/.claude/skills/`。
 
 ---
