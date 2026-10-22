@@ -11,6 +11,7 @@
 | `thiel-perspective` | 彼得·蒂爾 | 逆向真理、垄断 vs 競爭、明確的樂觀 |
 | `steve-jobs-perspective` | 史蒂夫·賈伯斯 | 科技×人文、極致專注、簡約與品味 |
 | `mark-teacher-perspective` | 馬克老師 | 人本×實戰、反求諸己、謙卑感恩、僕人領導（純本地語料蒸餾）|
+| `jason-perspective` | Jason（電商 × IG 內容獲客導師） | 付款驗證優先、賽馬測試、標籤思維、鉤子前置、流量接成生意系統、AI 生產線（純本地語料蒸餾：20 支短影片口白）|
 | `advisory-dialogue` | 圓桌主持 | 讓多個人物**真實交鋒**、收斂出決策地圖 |
 
 ### 工具型 Skill
