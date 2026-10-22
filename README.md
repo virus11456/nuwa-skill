@@ -58,11 +58,11 @@
 | `thiel-perspective` | 彼得·蒂爾 | 逆向真理 · 壟斷 vs 競爭 · 明確的樂觀 |
 | `steve-jobs-perspective` | 史蒂夫·賈伯斯 | 科技×人文 · 極致專注 · 簡約與品味 |
 | `mark-teacher-perspective` | 馬克老師 | 人本×實戰 · 反求諸己 · 謙卑感恩 · 僕人領導 |
-| `wangheng-perspective` | wangheng（電商 × IG 獲客導師） | 付款驗證 · 賽馬測試 · 標籤思維 · 流量接成生意系統 |
+| `jason-perspective` | Jason（電商 × IG 獲客導師） | 付款驗證 · 賽馬測試 · 標籤思維 · 流量接成生意系統 |
 | `advisory-dialogue` | 圓桌主持 | 讓多個人物**真實交鋒**、收斂出決策地圖 |
 | `darwin-skill` | 達爾文（工具）| 讓任何 SKILL.md 用 9 維評分持續自我進化 |
 
-每個人物 Skill 都基於約 50 個一手/二手來源深度調研（馬克老師與 wangheng 為純本地語料蒸餾），提煉 6–7 個核心心智模型、10 條決策啟發式、完整表達 DNA 與誠實邊界，調研過程保存在各自的 `references/research/` 內，完全自包含。
+每個人物 Skill 都基於約 50 個一手/二手來源深度調研（馬克老師與 Jason 為純本地語料蒸餾），提煉 6–7 個核心心智模型、10 條決策啟發式、完整表達 DNA 與誠實邊界，調研過程保存在各自的 `references/research/` 內，完全自包含。
 
 **安裝（任何裝置的 Claude Code）— 一鍵裝好整包（含達爾文自動進化器）：**
 
