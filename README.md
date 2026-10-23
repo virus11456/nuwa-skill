@@ -58,6 +58,7 @@
 | `thiel-perspective` | 彼得·蒂爾 | 逆向真理 · 壟斷 vs 競爭 · 明確的樂觀 |
 | `steve-jobs-perspective` | 史蒂夫·賈伯斯 | 科技×人文 · 極致專注 · 簡約與品味 |
 | `mark-teacher-perspective` | 馬克老師 | 人本×實戰 · 反求諸己 · 謙卑感恩 · 僕人領導 |
+| `ni-haixia-perspective` | 倪海廈 | 先知常人 · 化繁為簡 · 讀圖取象 · 療效為王（570 支課程逐字稿蒸餾，含醫療安全護欄）|
 | `advisory-dialogue` | 圓桌主持 | 讓多個人物**真實交鋒**、收斂出決策地圖 |
 | `darwin-skill` | 達爾文（工具）| 讓任何 SKILL.md 用 9 維評分持續自我進化 |
 
